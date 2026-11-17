@@ -1,0 +1,23 @@
+.fullbox{
+    background-color: blueviolet;
+    position: relative;
+    left: 400px;
+    height: 600px;
+    width: 600px;
+    display: flex;
+    align-items: center;
+    
+}
+input{
+    padding:  8px 120px;
+}
+h2{
+    display: flex;
+    justify-content: center;
+    
+}
+
+form{
+    position:relative;
+    bottom: 100px;
+}

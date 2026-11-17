@@ -1,0 +1,98 @@
+.photo{
+    position: relative;
+    right: 370px;
+    top: 10px;
+    width: 150px;
+    height: 180px;
+}
+
+.box{
+    height: 200px;
+    background: linear-gradient( 135deg, #03081b,#162449,#364c7a);
+    border: 1px solid #10486d;
+    display: flex;
+    justify-content: center;
+    position:relative ;
+    top: 10px;
+    margin-bottom: 10px;
+          
+}
+
+.para{
+    width: 150px;
+    height: 100px;
+    position: relative;
+    right: -400px;
+    bottom: 50px;
+}
+
+
+
+.price{
+    color: white;
+    height: 20px;
+    width: 150px;
+    position: static;
+    position: relative;
+    top: -45px;
+    left: 300px;
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.countbox{
+    
+    height:30px;
+    position: relative;
+    top: 80px;
+    left: 100px;
+}
+
+p{
+    width: 150px;
+    position: relative;
+    top: -10px;
+    left: 500px;
+}
+
+span{
+    padding: 10px;
+    color: white;
+}
+
+.empty-cart{
+    color: white;
+    font-family:sans-serif ;
+    position: relative;
+    top: 250px;
+    left: 350px;
+    font-size: 30px;
+
+}
+
+.q-btn{
+
+    width: 50px;
+    height: 30px;
+    color:white;
+    background: linear-gradient(110deg, #152f66, #15315c);
+    border:1px solid #10486d;
+    border-radius: 5px;
+}
+.add-bck{
+background: linear-gradient(110deg, #2563EB, #7C3AED);
+  color: white;
+  width: 100px;
+  height: 40px;
+  position: relative;
+  top: 5px;  
+  background:transparent ;
+  border-radius: 8px;
+  border: 1px solid #10486d;
+  transition: all 0.3s ease;
+}
+
+.add-bck:hover{
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px #1946a1;
+}
