@@ -78,7 +78,7 @@
     align-items: center;
     text-align: center;
 
-    background-image: url("/login-bg.jpg");
+    background-image: url("../assets/login-bg.jpg");
     background-size: cover;
 
     font-size: 18px;
