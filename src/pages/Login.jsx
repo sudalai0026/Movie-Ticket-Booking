@@ -3,8 +3,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 import { GoogleLogin } from "@react-oauth/google"
 import back from "../assets/back.mp4"
-
-
+import { Spin } from "antd"
 export default function Login() {
   const [email, setEmail] = useState("")
   const [pass, setPass] = useState("")
@@ -14,6 +13,7 @@ export default function Login() {
 
   const navigate = useNavigate();
 
+  const [loading,setloading]=useState(false)
 
   function log() {
       setEmailmgs("")
@@ -31,8 +31,10 @@ export default function Login() {
     }
 
     if (email.trim() !==""  && pass.trim() !=="") {
-      navigate(`/home`)
-     
+      setloading(true) 
+      setTimeout(()=>{
+          navigate(`/home`)
+      },3000);
 
     }
 
@@ -94,9 +96,19 @@ export default function Login() {
             className="forget"
           >Forget password</a>
 
-          <button type="button" onClick={log} className="login-btn"> Login</button>
+          <button 
+          type="button" 
+          onClick={log} 
+          className="login-btn"
+          disabled={loading}
+          >
+            {loading?(<span className="spin">
+            <Spin size="small" className="spiner" />
+            loading...
+            </span>) : "login"}
+        </button>
 
-          <h5 >Another Option:<a href="#create new account" className="new-account">Create new Account</a></h5>
+          <h5 className="new-account">Another Option:<a href="#create new account" className="create" >Create new Account</a></h5>
 
 
 
@@ -107,7 +119,7 @@ export default function Login() {
             text="signin_with"
             
             onSuccess={(res) => {
-              console.log(res.credential)
+            
               alert("Login Success!")
               navigate(`/home`)
             }}

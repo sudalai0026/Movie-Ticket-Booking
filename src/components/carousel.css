@@ -85,17 +85,36 @@ button {
     right: 580px;
     color: #ffffff;
     background: rgb(16, 23, 56);
+     border: 1px solid #10486d;
+    border-radius: 20px;
+    transition: all 0.6s ease-in-out;
 }
 
+.prev:hover {
+
+    transform: scale(1.01) translateY(-7px);
+    box-shadow: 0 8px 15px rgba(41, 164, 235, 0.3);
+}
+
+
 .next {
+     border: 1px solid #10486d;
     
-    border: none;
     height: 40px;
     width: 50px;
     position: relative;
     left: 580px;
     color: #ffffff;
     background: rgb(16, 23, 56);
+     border-radius: 20px;
+    transition: all 0.6s ease-in-out;
+}
+
+
+.next:hover {
+
+    transform: scale(1.01) translateY(-7px);
+    box-shadow: 0 8px 15px rgba(41, 164, 235, 0.3);
 }
 
 .info {
