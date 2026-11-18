@@ -8,26 +8,50 @@
     top: -5px;
     z-index: 1;
     isolation: isolate;
-
-    background:
-        linear-gradient(rgba(16, 33, 65, 0.18), rgba(16, 33, 65, 0.18)) padding-box,
-        conic-gradient(from var(--angle),
-            #00f5ff,
-            #2563eb,
-            #a855f7,
-            #00f5ff) border-box;
-
+    background: rgba(16, 33, 65, 0.18);
     backdrop-filter: blur(5px);
     -webkit-backdrop-filter: blur(5px);
-
-    border: 2px solid transparent;
+    border: 1px solid rgba(100, 160, 255, 0.35);
     border-radius: 15px;
-    animation: borderRotate 8s linear infinite;
-
     box-shadow:
         0 0 15px rgba(37, 99, 235, 0.4),
         0 0 30px rgba(37, 99, 235, 0.2);
 }
+
+
+
+.log-form::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    padding: 2px;
+    border-radius: inherit;
+    z-index: -1;
+
+    background: conic-gradient(from var(--angle),
+            #00f5ff,
+            #2563eb,
+            #a855f7,
+            #00f5ff);
+
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    mask-composite: exclude;
+
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+
+    -webkit-mask-composite: xor;
+
+    filter:
+        drop-shadow(0 0 5px #00f5ff) drop-shadow(0 0 8px #2563eb) drop-shadow(0 0 15px #a855f7);
+
+    animation: borderRotate 8s linear infinite;
+}
+
 
 
 @property --angle {
@@ -50,7 +74,7 @@
     align-items: center;
     text-align: center;
 
-    background-image: url("../assets/login-bg.jpg");
+    background-image: url("/login-bg.jpg");
     background-size: cover;
 
     font-size: 18px;
@@ -164,7 +188,7 @@ h1 {
     right: 70px;
 
     transition: all 0.3s ease;
-  
+
 }
 
 
