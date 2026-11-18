@@ -43,7 +43,9 @@ export default function Login() {
         <video
         src={back}
         autoPlay
+        muted
         loop
+        playsInline
         className="video-btn"
         />
       
