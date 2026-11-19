@@ -15,13 +15,17 @@
         0 0 15px rgba(37, 99, 235, 0.4),
         0 0 30px rgba(37, 99, 235, 0.2);
 
-    transition: all 0.3s ease-in-out;
+    transition: all 0.6s ease-in-out;
 }
 
+
+
 .log-form:hover {
+    transform: scale(1.01) translateY(-7px);
 
-    transform: scale(1) translateY(-3px);
-
+    box-shadow:
+        0 8px 15px rgba(41, 164, 235, 0.3),
+        0 0 25px rgba(37, 99, 235, 0.5);
 }
 
 
