@@ -7,6 +7,9 @@ function Carousel({ movies }) {
     const [runmovie, setrunmovie] = useState(3);
     const speed = useRef(0)
     const timer = useRef(null)
+    const touchStartX=useRef(0)
+
+
     function Nextmovie() {
         setrunmovie((old) => (old + 1) % movies.length)
     }
@@ -34,6 +37,29 @@ function Carousel({ movies }) {
         }, 150);
 
     }
+  
+
+function HandleTouchStart(e) {
+    touchStartX.current = e.changedTouches[0].clientX
+}
+
+function HandleTouchEnd(e) {
+    const touchEndX = e.changedTouches[0].clientX
+
+    const distance = touchStartX.current - touchEndX
+
+    if (Math.abs(distance) < 40) return
+
+    if (distance > 0) {
+        Nextmovie()
+    } else {
+        Prevmovie()
+    }
+}
+
+
+
+
    useEffect(() => {
 
     timer.current = setTimeout(() => {
@@ -51,6 +77,9 @@ function Carousel({ movies }) {
         <div>
             <div className="allimage"
                 onWheel={HandleWheel}
+                onTouchStart={HandleTouchStart}
+                onTouchEnd={HandleTouchEnd}
+
             >
 
                 <button className="prev" onClick={Prevmovie}>❮</button>
