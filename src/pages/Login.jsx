@@ -110,10 +110,7 @@ export default function Login() {
 
           <h5 className="new-account">Another Option:<a href="#create new account" className="create" >Create new Account</a></h5>
 
-
-
-        </form>
-        <div className="google-btn">
+         <div className="google-btn">
           <GoogleLogin
              theme="filled_black"
             text="signin_with"
@@ -128,6 +125,9 @@ export default function Login() {
             }
           />
         </div>
+
+        </form>
+        
       </div>
 
     </>

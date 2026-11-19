@@ -3,9 +3,7 @@
     width: 400px;
     height: 460px;
     padding: 40px;
-    position: relative;
-    left: 110px;
-    top: -5px;
+    margin-top: 195px;
     z-index: 1;
     isolation: isolate;
     background: rgba(16, 33, 65, 0.18);
@@ -16,6 +14,14 @@
     box-shadow:
         0 0 15px rgba(37, 99, 235, 0.4),
         0 0 30px rgba(37, 99, 235, 0.2);
+
+transition: all 0.3s ease-in-out;
+}
+
+.log-form:hover{
+
+    transform: scale(1) translateY(-3px);
+    
 }
 
 
@@ -63,6 +69,8 @@
         --angle: 360deg;
     }
 }
+
+
 
 
 
@@ -210,11 +218,13 @@ color: rgb(171, 205, 238)
 
 
 .google-btn {
-    position: relative;
-    right: 250px;
-    top: 200px;
-    z-index: 1;
+    width: 220px;
+    position: absolute;
+    left: 130px;
+    bottom: 30px;
+  
 }
+
 
 
 
