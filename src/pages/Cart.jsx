@@ -28,16 +28,18 @@ function Cart() {
                             <img className="photo" src={movie.image} />
 
                             <div className="para">
-
-                                <p><b>Budget:</b>{movie.name}</p>
-
+                                 
+                                <p><b>Name:</b>{movie.name}</p>
+                                 <p><b>quantity:</b>{movie.quantity}</p>
                             </div>
 
                             <div className="countbox">
-
+                               
                                 <button className="q-btn"onClick={() => updateQuantity(movie._id, -1)}>-</button>
                                 <span>{movie.quantity}</span>
                                 <button className="q-btn" onClick={() => updateQuantity(movie._id, 1)}>+</button>
+                               
+                               
                                 <p className="price">Price:₹{Number(movie.ticketprice) * movie.quantity}</p>
 
                             </div>

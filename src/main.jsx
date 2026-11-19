@@ -5,7 +5,7 @@ import {BrowserRouter} from 'react-router-dom'
 import App from './App.jsx'
 import { GoogleOAuthProvider } from "@react-oauth/google"
 
-
+import "./index.css";
 createRoot(document.getElementById('root')).render(
   <StrictMode>
       <BrowserRouter basename={import.meta.env.BASE_URL}>

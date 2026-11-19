@@ -120,3 +120,79 @@
     transform: translateY(-1px);
     box-shadow: 0 4px 12px #2563EB80;
 }
+
+
+
+
+/* Mobile Navbar */
+@media (max-width: 600px) {
+
+    .navbox {
+        height: auto;
+        min-height: 80px;
+        padding: 12px;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    .nav {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 15px 10px;
+        justify-items: center;
+        align-items: center;
+    }
+
+    .brand {
+        grid-column: 1 / -1;
+        position: static;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .age {
+        position: static;
+        width: 45px;
+    }
+
+    .brand h1 {
+        position: static;
+        font-size: 25px;
+        margin: 0;
+    }
+
+    .ticket {
+        position: static;
+    }
+
+    .in {
+        grid-column: 1 / -1;
+        width: 100%;
+        max-width: 350px;
+        box-sizing: border-box;
+        font-size: 14px;
+    }
+
+    .home,
+    .login {
+        padding: 7px 12px;
+        font-size: 13px;
+    }
+
+    .cart-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav li:last-child a {
+        position: relative;
+    }
+
+    .cartcount {
+        top: -10px;
+        right: -8px;
+        bottom: auto;
+    }
+
+}

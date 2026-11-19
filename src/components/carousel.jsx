@@ -84,7 +84,7 @@ function Carousel({ movies }) {
             </div>
 
             <div className="info">
-                <h2>{currentMovie?.name}</h2>
+                <span>{currentMovie?.name}</span>
                 <p>{currentMovie?.description}</p>
             </div>
 

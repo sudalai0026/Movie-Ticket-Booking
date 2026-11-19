@@ -70,3 +70,73 @@ h3 {
 .ton:hover {
     background: linear-gradient( 110deg,#5e46e7,#224d9c);
 }
+
+
+
+@media (max-width: 900px) {
+
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        gap: 30px;
+    }
+
+    .con {
+        width: 100%;
+        max-width: 290px;
+        box-sizing: border-box;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 15px;
+        gap: 25px;
+    }
+
+    .con {
+        width: 100%;
+        max-width: 290px;
+        box-sizing: border-box;
+    }
+
+}
+
+
+/* Mobile - Movie Card Design */
+@media (max-width: 600px) {
+
+    .imagebox {
+        left: 0;
+        width: 100%;
+    }
+
+    .img {
+        width: 100%;
+        max-width: 280px;
+        height: 400px;
+        object-fit: cover;
+        top: 0;
+        left: 0;
+    }
+
+    .con h3 {
+        font-size: 15px;
+        margin: 12px 5px;
+    }
+
+    .ton {
+        position: static;
+        width: calc(50% - 12px);
+        height: 35px;
+        margin: 0 4px;
+        font-size: 12px;
+    }
+
+}
+

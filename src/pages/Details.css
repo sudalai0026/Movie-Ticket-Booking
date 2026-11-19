@@ -103,3 +103,65 @@ h2 {
   transform: translateY(-2px);
   box-shadow: 0 0 15px #1946a1;
 }
+
+
+@media (max-width: 600px) {
+
+    .box2 {
+        height: auto;
+        min-height: 900px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 15px;
+        padding: 60px 15px 25px;
+        box-sizing: border-box;
+    }
+
+    .back {
+        position: absolute;
+        top: 12px;
+        left: 12px;
+    }
+
+    .images {
+        width: 100%;
+        max-width: 260px;
+        height: 330px;
+        object-fit: contain;
+        position: static;
+    }
+
+    
+.para {
+    display: block;
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: auto;
+   
+    align-self: stretch;
+    color: white;
+    font-size: 14px;
+    text-align: left;
+    z-index: 2;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.para h2 {
+   width: 400px;
+   
+}
+
+
+    .btn,
+    .btn-right {
+        position: static;
+        width: 120px;
+        height: 40px;
+        margin: 8px 4px;
+    }
+
+}
