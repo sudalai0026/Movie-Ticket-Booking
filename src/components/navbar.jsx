@@ -1,31 +1,30 @@
+
 import image from "../assets/image.png"
-import { ShoppingCart } from "lucide-react"
+import { ShoppingCart, MoreVertical } from "lucide-react"
 import "./navbar.css"
 import { Link } from "react-router-dom"
-import { useContext } from "react"
+import { useContext, useState } from "react"
 import { CartContext } from "../context/cartcontext"
 
 export default function Navbar({ search, setSearch }) {
+
+  const [menuopen, setMenuopen] = useState(false)
 
   const { cart } = useContext(CartContext)
 
   const totalitems = cart.length;
 
-
   return (
     <>
-      <div className="navbox" >
-
-
-
+      <div className="navbox">
         <nav>
-
           <ul className="nav">
+
             <li className="brand">
               <img src={image} className="age" />
-              <h1>  
+              <h1>
                 <span className="quick">Quick</span>
-                <span className="ticket">Ticket</span> 
+                <span className="ticket">Ticket</span>
               </h1>
             </li>
 
@@ -37,21 +36,29 @@ export default function Navbar({ search, setSearch }) {
               onChange={(i) => setSearch(i.target.value)}
             />
 
-            <li><Link to="/home" className="home">Home</Link></li>
+            <li className="threedot">
 
-            <li><Link to="/" className="login">Login</Link></li>
+              <button onClick={() => setMenuopen(!menuopen)}>
+                <MoreVertical />
+              </button>
 
+              <div className={`dropdown-menu ${menuopen ? "show" : ""}`}>
 
-            <li>
-              <Link to="/cart">
-                <ShoppingCart size={40}  color="#1a3f91"  className="cart-icon"/>
+                <Link to="/home" className="home" onClick={() => setMenuopen(false)}>
+                  Home
+                </Link>
 
+                <Link to="/" className="login" onClick={() => setMenuopen(false)}>
+                  Login
+                </Link>
 
-                {totalitems > 0 && <span className="cartcount">
-                  {totalitems}
-                </span>}
+                <Link to="/cart" onClick={() => setMenuopen(false)}>
+                  <ShoppingCart size={40} color="#1a3f91" className="cart-icon" />
+                  <span className="cartcount">{totalitems}</span>
+                </Link>
 
-              </Link>
+              </div>
+
             </li>
 
           </ul>
@@ -60,8 +67,3 @@ export default function Navbar({ search, setSearch }) {
     </>
   )
 }
-
-
-
-
-

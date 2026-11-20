@@ -113,7 +113,7 @@
     transition: 0.3s;
     border: 1px solid #7C3AED;
     border-radius: 5px;
-    
+
 }
 
 .cart-icon:hover {
@@ -124,11 +124,10 @@
 
 
 
-/* Mobile Navbar */
 @media (max-width: 600px) {
 
     .navbox {
-        height: auto;
+        height: 100px;
         min-height: 80px;
         padding: 12px;
         justify-content: center;
@@ -145,33 +144,49 @@
     }
 
     .brand {
-        grid-column: 1 / -1;
         position: static;
+        right: auto;
+        top: 0;
+        display: flex;
         align-items: center;
         justify-content: center;
+        gap: 5px;
+        margin: 0;
     }
 
     .age {
+        width: 40px;
         position: static;
-        width: 45px;
+        position: relative;
+        right: -40px;
+        left: 0;
+        top: 20px;
+
     }
 
     .brand h1 {
-        position: static;
-        font-size: 25px;
+        position: relative;
+        top: 20px;
+        font-size: 20px;
         margin: 0;
+        gap: 0;
     }
 
     .ticket {
         position: static;
+        position: relative;
+        right: 20px;
     }
 
     .in {
         grid-column: 1 / -1;
-        width: 100%;
+        width: 250px;
         max-width: 350px;
         box-sizing: border-box;
         font-size: 14px;
+        position: relative;
+        left: -50px;
+        bottom: -11px;
     }
 
     .home,
@@ -193,6 +208,85 @@
         top: -10px;
         right: -8px;
         bottom: auto;
+    }
+
+}
+
+
+.threedot {
+    display: none;
+}
+
+@media (max-width: 600px) {
+
+    .threedot {
+        display: block;
+    }
+
+}
+
+
+
+.threedot {
+    display: contents;
+}
+
+.threedot button {
+    display: none;
+}
+
+.dropdown-menu {
+    display: contents;
+}
+
+
+
+
+@media (max-width: 600px) {
+
+    .threedot {
+        display: block;
+        position: relative;
+    }
+
+    .threedot button {
+        display: block;
+        border: 1px solid #10486d;
+        color: white;
+        position: relative;
+        left: 230px;
+        bottom: 40px;
+    }
+
+    .dropdown-menu {
+        display: none;
+        position: absolute;
+        left: 130px;
+        top: -5px;
+        width: 120px;
+        padding: 15px;
+        background: #101a38;
+        border: 1px solid #7C3AED;
+        border-radius: 10px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .dropdown-menu.show {
+        display: flex;
+    }
+
+    .dropdown-menu a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .cartcount {
+        background-color: #7C3AED;
+        padding: 8px;
+        position: relative;
+        bottom: 40px;
+
     }
 
 }
